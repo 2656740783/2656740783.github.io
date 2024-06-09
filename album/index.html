@@ -5,7 +5,7 @@
   diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
   LA51: undefined,
   greetingBox: {"enable":true,"default":"晚上好👋","list":null},
-  twikooEnvId: 'https://twikoo-rho-blue.vercel.app',
+  twikooEnvId: 'https://twikoo.lethe.love/',
   commentBarrageConfig:undefined,
   root: '/',
   preloader: {"source":3},
@@ -363,8 +363,8 @@ queueMicrotask(() => {
   const init = () => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
-      envId: 'https://twikoo-rho-blue.vercel.app',
-      region: 'AWS / Hong Kong',
+      envId: 'https://twikoo.lethe.love/',
+      region: 'us-west-2',
       onCommentLoaded: () => {
         anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
       }
@@ -380,8 +380,8 @@ queueMicrotask(() => {
     const countELement = document.getElementById('twikoo-count')
     if(!countELement) return
     twikoo.getCommentsCount({
-      envId: 'https://twikoo-rho-blue.vercel.app',
-      region: 'AWS / Hong Kong',
+      envId: 'https://twikoo.lethe.love/',
+      region: 'us-west-2',
       urls: [window.location.pathname],
       includeReply: false
     }).then(res => {
@@ -422,8 +422,8 @@ queueMicrotask(() => {
   const getComment = () => {
     const runTwikoo = () => {
       twikoo.getRecentComments({
-        envId: 'https://twikoo-rho-blue.vercel.app',
-        region: 'AWS / Hong Kong',
+        envId: 'https://twikoo.lethe.love/',
+        region: 'us-west-2',
         pageSize: 6,
         includeReply: true
       }).then(function (res) {
